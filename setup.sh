@@ -34,7 +34,6 @@ usermod --password $(echo "register" | openssl passwd -1 -stdin) register
 
 groupadd -f guests
 
-chmod +x register
 cp register /usr/bin/.
 usermod --shell /usr/bin/register register
 
