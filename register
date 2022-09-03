@@ -13,7 +13,7 @@ sudo useradd -m ${username}
 sudo usermod -aG guests ${username}
 
 echo "Set password for ${username}"
-passwd ${username}
+sudo passwd ${username}
 
 echo "Welcome to ${hostname}!"
 exit

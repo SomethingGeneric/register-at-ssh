@@ -39,6 +39,8 @@ usermod --shell /usr/bin/register register
 
 wheres_usermod=$(which usermod)
 wheres_useradd=$(which useradd)
+wheres_passwd=$(which passwd)
 
 echo "register ALL = (root) NOPASSWD: ${wheres_usermod}" >> /etc/sudoers
 echo "register ALL = (root) NOPASSWD: ${wheres_useradd}" >> /etc/sudoers
+echo "register ALL = (root) NOPASSWD: ${wheres_passwd}" >> /etc/sudoers
