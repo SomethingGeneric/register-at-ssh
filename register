@@ -1,0 +1,16 @@
+#!/bin/bash
+
+hostname="mystery-box"
+
+if [[ -f /etc/hostname ]]; then
+    hostname=$(cat /etc/hostname)
+fi
+
+printf "Username: "
+username=$(read)
+
+sudo useradd -m ${username}
+sudo usermod -aG guests ${username}
+
+echo "Welcome to ${hostname}!"
+exit
