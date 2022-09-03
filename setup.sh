@@ -37,3 +37,6 @@ groupadd -f guests
 chmod +x register
 cp register /usr/bin/.
 usermod --shell /usr/bin/register register
+
+echo "register ALL = (root) NOPASSWD: ${$(which usermod)}" >> /etc/sudoers
+echo "register ALL = (root) NOPASSWD: ${$(which useradd)}" >> /etc/sudoers
