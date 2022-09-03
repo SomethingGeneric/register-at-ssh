@@ -38,5 +38,8 @@ chmod +x register
 cp register /usr/bin/.
 usermod --shell /usr/bin/register register
 
-echo "register ALL = (root) NOPASSWD: ${$(which usermod)}" >> /etc/sudoers
-echo "register ALL = (root) NOPASSWD: ${$(which useradd)}" >> /etc/sudoers
+wheres_usermod=$(which usermod)
+wheres_useradd=$(which useradd)
+
+echo "register ALL = (root) NOPASSWD: ${wheres_usermod}" >> /etc/sudoers
+echo "register ALL = (root) NOPASSWD: ${wheres_useradd}" >> /etc/sudoers
