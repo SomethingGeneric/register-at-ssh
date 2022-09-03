@@ -7,7 +7,7 @@ if [[ -f /etc/hostname ]]; then
 fi
 
 printf "Username: "
-username=$(read)
+read username
 
 sudo useradd -m ${username}
 sudo usermod -aG guests ${username}
